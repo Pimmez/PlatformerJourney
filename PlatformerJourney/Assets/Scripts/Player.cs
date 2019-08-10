@@ -23,7 +23,9 @@ public class Player : MonoBehaviour
 
 	public int Lives { get { return lives; } set { lives = value; } }
 	public int MaxLives { get { return maxLives; } }
+	public Vector3 Position { get { return position; } set { position = value; } }
 
+	private Vector3 position;
 	private int maxLives = 5;
 	private int lives;
 	
