@@ -388,8 +388,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 314ac9b0ebfae094aaa64ba24da93b01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1667303998}
-  offset: {x: 0, y: 0, z: -10}
+  dampTime: 0.15
+  target: {fileID: 1667303998}
+  cam: {fileID: 519420031}
+  offset: {x: 0.5, y: 0.35, z: 0}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -1653,7 +1655,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43bc5aa911b55ea4a97e637b01e5385f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLives: 5
 --- !u!114 &1667304002
 MonoBehaviour:
   m_ObjectHideFlags: 0
