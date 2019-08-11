@@ -11,15 +11,8 @@ public class HUD : MonoBehaviour
 	[SerializeField] private Sprite fullHeart;
 	[SerializeField] private Sprite emptyHeart;
 
-    // Start is called before the first frame update
-    private void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     private void Update()
-    {
+	{ 
 		for (int i = 0; i < heartSprites.Count; i++)
 		{
 			if(i < Player.Instance.Lives)

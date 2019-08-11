@@ -37,13 +37,15 @@ public class Player : MonoBehaviour
 	private void Update()
 	{
 		UpdateLives();
+		Debug.Log(lives);
 	}
 
 	private void UpdateLives()
 	{
 		if (lives == 0)
 		{
-			//Destroy(this.gameObject);
+			Destroy(gameObject);
+			LevelController.Instance.loseHolder.SetActive(true);
 		}
 
 		if(lives >= maxLives)
