@@ -37,7 +37,6 @@ public class Player : MonoBehaviour
 	private void Update()
 	{
 		UpdateLives();
-		Debug.Log(lives);
 	}
 
 	private void UpdateLives()
