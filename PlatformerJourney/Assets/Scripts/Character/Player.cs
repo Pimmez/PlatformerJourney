@@ -28,9 +28,12 @@ public class Player : MonoBehaviour
 	private Vector3 position;
 	private int maxLives = 5;
 	private int lives;
+
+	private Animator anim;
 	
 	private void Start()
 	{
+		anim = GetComponent<Animator>();
 		lives = maxLives;
 	}
 
