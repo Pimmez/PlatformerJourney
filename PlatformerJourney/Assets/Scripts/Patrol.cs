@@ -8,6 +8,12 @@ public class Patrol : MonoBehaviour
 	[SerializeField] private float speed;
 	[SerializeField] private Transform point1, point2;
 	private float distance;
+	private AudioManager audioManager;
+
+	private void Start()
+	{
+		audioManager = FindObjectOfType<AudioManager>();
+	}
 
 	private void Update()
     {
@@ -28,6 +34,7 @@ public class Patrol : MonoBehaviour
 		if(collision.gameObject.tag == Tags.Player)
 		{
 			Player.Instance.Lives--;
+			audioManager.PlayAudioOnce(4);
 			collision.gameObject.transform.position = new Vector2(-1.5f, -1.25f);
 		}
 	}

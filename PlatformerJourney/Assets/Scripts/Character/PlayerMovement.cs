@@ -10,10 +10,12 @@ public class PlayerMovement : MonoBehaviour
 	private bool jump = false;
 
 	private Animator anim;
+	private AudioManager audioManager;
 
 	private void Start()
 	{
 		anim = GetComponent<Animator>();
+		audioManager = FindObjectOfType<AudioManager>();
 	}
 
 	private void Update()
@@ -37,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
 		if (Input.GetButtonDown("Jump"))
 		{
 			jump = true;
+			audioManager.PlayAudioOnce(1);
 		}
 	}
 

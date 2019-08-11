@@ -29,10 +29,12 @@ public class Player : MonoBehaviour
 	private int maxLives = 5;
 	private int lives;
 
+	private AudioManager audioManager;
 	private Animator anim;
 	
 	private void Start()
 	{
+		audioManager = FindObjectOfType<AudioManager>();
 		anim = GetComponent<Animator>();
 		lives = maxLives;
 	}
@@ -46,8 +48,9 @@ public class Player : MonoBehaviour
 	{
 		if (lives == 0)
 		{
-			Destroy(gameObject);
+			audioManager.PlayAudioOnce(6);
 			LevelController.Instance.loseHolder.SetActive(true);
+			Destroy(gameObject);
 		}
 
 		if(lives >= maxLives)
